@@ -36,14 +36,19 @@ product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() !== -1
 
 
 //---RadioFilter---//
-const handleChange = event => {
-  setSelectedCategory(event.target.value)
+const handleChange = e=> {
+  setSelectedCategory(e.target.value)
 }
+
+const handleClick = e=> {
+  setSelectedCategory(e.target.value)
+}
+
 
 
 //ButtonFilter---//
-  setSelectedCategory(event.target.value)
-}
+ // setSelectedCategory(e.target.value)
+
 
 function filteredData(products, selected, query){
 let filteredProducts = products 
@@ -53,7 +58,6 @@ let filteredProducts = products
 if(query){
   filteredProducts = filteredItems()
 }
-
 
 //Selected filter 
 if(selected){
@@ -81,18 +85,15 @@ if(selected){
       newPrice={prevPrice}
       />
      }) 
-   
-
-const result = filteredData(products, selectedCategory.query){
-
-} 
+}
+const result = filteredData(products, selectedCategory.query)
 
 
   return (
 <div className="App">
-    <Nav/>
-    <Recomended/>
-    <Products/>
+    <Nav query={query} handleInputChange={handleInputChange}/>
+    <Recomended handleClick={handleClick}/>
+    <Products result={result}/>
     <Slidebar handleChange={handleChange}/>
   </div>
   );
