@@ -11,16 +11,16 @@ function Recomended ()  {
             All Products
           </button>
           <button className="btns">
-          Sonic
+          Nike
           </button>
           <button className="btns">
-          Amazon
+          Adidas
           </button>
           <button className="btns">
-          GloboPlay
+          Puma
           </button>
           <button className="btns">
-          Eco Show
+          Vans
           </button>
         </div>
       </div>

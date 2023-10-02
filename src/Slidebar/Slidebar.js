@@ -1,7 +1,7 @@
 import "./Slidebar.css"
-import Category from "./Category/Category.css"
+import Category from "./Category/Category"
 import Price from "./Price/Price"
-import Colors from "./Colors/Color"
+import Color from "./Colors/Color"
 
 function Slidebar  ()  {
   return (
@@ -13,7 +13,7 @@ function Slidebar  ()  {
                 </h1>
            <Category/>
            <Price/> 
-           <Colors/>
+           <Color/>
             </div>
         </div>
     </>
