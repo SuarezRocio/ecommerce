@@ -3,7 +3,8 @@ import Category from "./Category/Category"
 import Price from "./Price/Price"
 import Color from "./Colors/Color"
 
-function Slidebar  ()  {
+function Slidebar  ({handleChange}){
+  console.log(handleChange)
   return (
     <>
         <div className="sidebar">
@@ -11,9 +12,9 @@ function Slidebar  ()  {
                 <h1>
                     <img className="carro" src="./carro.png" />
                 </h1>
-           <Category/>
-           <Price/> 
-           <Color/>
+           <Category handleChange={handleChange}/>
+           <Price handleChange={handleChange}/> 
+           <Color handleChange={handleChange}/>
             </div>
         </div>
     </>

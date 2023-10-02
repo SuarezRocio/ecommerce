@@ -4,6 +4,7 @@ import  Products  from "./Products/Products";
 import Recomended from "./Recomended/Recomended";
 import Slidebar from "./Slidebar/Slidebar";
 import products from "./db/data"; 
+import Card from "./Card/Card";
 
 //42:14
 //https://www.youtube.com/watch?v=lfm_Hu0hEms
@@ -41,23 +42,60 @@ const handleChange = event => {
 
 
 //ButtonFilter---//
-const handleClick = event => {
   setSelectedCategory(event.target.value)
 }
 
-function filteredData(products, selected){
+function filteredData(products, selected, query){
+let filteredProducts = products 
 
+
+//Filtering input Items 
+if(query){
+  filteredProducts = filteredItems()
 }
+
+
+//Selected filter 
+if(selected){
+  filteredProducts = filteredProducts.filter(({
+    product 
+  }) => 
+  product.category === selected ||
+  product.color === selected ||
+  product.company === selected ||
+  product.newPrice === selected || 
+  product.title === selected)
+
+/** category, 
+    color,
+    company,
+    newPrice,
+    title */
+    filteredProducts.map(({img, title, star, reviews, prevPrice}) => {
+      <Card 
+      key={Math.random()}
+      img={img}
+      title={title}
+      star={star}
+      reviews={reviews}
+      newPrice={prevPrice}
+      />
+     }) 
+   
+
+const result = filteredData(products, selectedCategory.query){
+
+} 
 
 
   return (
-    <div className="App">
+<div className="App">
     <Nav/>
     <Recomended/>
     <Products/>
-    <Slidebar/>
-    </div>
+    <Slidebar handleChange={handleChange}/>
+  </div>
   );
 }
-  
+}
 export default App;

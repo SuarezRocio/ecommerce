@@ -1,10 +1,15 @@
 
 
-function Input ()  {
+function Input ({handleChange, value, title, name, color})  {
   return (
     <label className="sidebar-label-container">
-    <span className="checkmark" name="test2">
-    </span>All
+    <input onChange={handleChange} type="radio" name="test" value={value}/>
+    <span className="checkmark"
+    style={{backgroundColor:color}}
+    name="test2">
+    </span>
+    {title}
+    All
     </label>
     )
 }
