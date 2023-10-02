@@ -8,14 +8,8 @@ function Recomended ({handleClick})  {
       <div className="recommended-flex">
         <h2>Recomended</h2>
         <div className="recommended-btns">
-          <button className="btns"
-          value=""
-          title="All Products"
-          >
-            All Products
-          </button>
           <Buttons onClickHandler={handleClick}
-          value="All Products"
+          value="Products"
           title="All Products"/>
           <Buttons onClickHandler={handleClick}
           value="Nike"
@@ -26,14 +20,18 @@ function Recomended ({handleClick})  {
           <Buttons onClickHandler={handleClick}
           value="Nike"
           title="Vans"/>
-          <Buttons onClickHandler={handleClick}
-          value="Nike"
-          title="Vans"/>
           </div>
       </div>
     </>
   )
 }
+
+{/**<button className="btns"
+          value=""
+          title="All Products"
+          >
+            All Products
+          </button> */}
 
 {/** <button className="btns">
           Nike
