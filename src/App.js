@@ -11,6 +11,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [query, setQuery] = useState("");
   const [showAllProducts, setShowAllProducts] = useState(true);
+  const [cart, setCart] = useState([]); // Estado para el carrito de compras
 
 
   const handleInputChange = (event) => {
@@ -102,6 +103,13 @@ function App() {
     // You can update the state or perform any other actions with the filtered items here
   };
   
+
+  // Función para agregar un producto al carrito
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
+
+
   function filteredData() {
     let filteredProducts = products;
   
@@ -139,6 +147,8 @@ function App() {
       });
     }
   
+
+
     return filteredProducts.map(({ img, title, star, reviews, prevPrice }) => (
       <Card
         key={Math.random()}
@@ -162,9 +172,18 @@ function App() {
       alignItems: "flex-start",
       gap: "20px"
     }}>
-        <Products result={result} />
+       <Products result={result} addToCart={ addToCart} />
+      
         <Slidebar handleChange={handleChange}  />
       </div>
+    {/*<div className="cart-container">
+        <h2>Shopping Cart</h2>
+        <ul>
+          {cart.map((product) => (
+            <li key={product.title}>{product.title}</li>
+          ))}
+        </ul>
+          </div>*/}
     </div>
   );
 }
