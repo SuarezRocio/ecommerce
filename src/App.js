@@ -13,7 +13,6 @@ function App() {
   const [showAllProducts, setShowAllProducts] = useState(true);
 
 
-
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
@@ -40,8 +39,6 @@ function App() {
     }
   };
   
-
-
 
   function filteredData() {
     let filteredProducts = products;

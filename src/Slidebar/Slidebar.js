@@ -11,10 +11,13 @@ function Slidebar  ({handleChange}){
         <div className="sidebar">
             <div className="logo-container">
            <h1>
-           <iphone src={iphone} />
+         {/*   <img src="https://i.ibb.co/qxv5Byx/iphone.jpg" 
+            className="celular"
+        />*/}
+           <div phone src={iphone}></div> 
            </h1>
-           <Category handleChange={handleChange}/>
-           <Price handleChange={handleChange}/> 
+        {/*   <Category handleChange={handleChange}/>
+           <Price handleChange={handleChange}/> */}
          {/*<Color handleChange={handleChange}/>*/}
             </div>
         </div>

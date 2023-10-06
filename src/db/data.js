@@ -116,6 +116,53 @@ const products = [
         company: "Eco Show",
         color: "blanco",
         category: "tecnologia" 
+    },
+
+    {
+        img:  "https://i.ibb.co/W221PQ2/iphone-celular.png",
+        title: "Iphone 14",
+        //start: <AiFillStart clasName="rating-star"/>,
+        reviews: "(300 rewies)",
+        prevPrice: "2300",
+        newPrice: "1000",
+        company: "IPHONE",
+        color: "blanco",
+        category: "tecnologia" 
+    },
+    {
+        img:  "https://i.ibb.co/q9dVRrd/iphone-celular-2.png",
+        title: "Iphone 14",
+        //start: <AiFillStart clasName="rating-star"/>,
+        reviews: "(300 rewies)",
+        prevPrice: "2700",
+        newPrice: "1000",
+        company: "IPHONE",
+        color: "blanco",
+        category: "tecnologia" 
+    },
+    
+    {
+        img:  "https://i.ibb.co/f032M2X/iphone-celular-3.png ",
+        title: "Iphone 14",
+        //start: <AiFillStart clasName="rating-star"/>,
+        reviews: "(300 rewies)",
+        prevPrice: "2500",
+        newPrice: "1000",
+        company: "IPHONE",
+        color: "blanco",
+        category: "tecnologia" 
+    },
+    
+    {
+        img:  "https://i.ibb.co/chdQxSt/smart-Watch.png ",
+        title: "Smart Watch",
+        //start: <AiFillStart clasName="rating-star"/>,
+        reviews: "(300 rewies)",
+        prevPrice: "1000",
+        newPrice: "1000",
+        company: "IPHONE",
+        color: "blanco",
+        category: "tecnologia" 
     }
 ]
 
