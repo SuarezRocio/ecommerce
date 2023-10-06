@@ -1,4 +1,46 @@
-import "./Category.css"
+import React from "react";
+import "./Category.css";
+
+const categories = [
+  { value: "capa", title: "Capa" },
+  { value: "generador", title: "Generador" },
+  { value: "moldura", title: "Moldura" },
+  { value: "soporte", title: "Soporte" },
+  // Agrega más categorías si es necesario
+];
+
+function Category({ handleChange }) {
+  return (
+    <div>
+      <h2 className="sidebar-title">Category</h2>
+      <div className="box">
+        <label htmlFor="" className="sidebar-label-container">
+          <input
+            onChange={handleChange}
+            type="radio"
+            value=""
+            name="category"
+          />
+          <span className="checkmark"></span>All
+        </label>
+        {categories.map((category) => (
+          <input
+            key={category.value}
+            onChange={handleChange}
+            value={category.value}
+            title={category.title}
+            name="category"
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Category;
+
+
+{/*import "./Category.css"
 //import  Input from "../../components/Input"
 
 function Category ({handleChange})  {
@@ -9,40 +51,40 @@ function Category ({handleChange})  {
       <div className="box">
         <label htmlFor="" className="sidebar-label-container">
         <input onChange={handleChange} type="radio"
-        value=""
-        name="test"
+        value="capa"
+        name="category"
         />
         <span className="checkmark"></span>All
         </label>  
         <input
         handleChange={handleChange}
-        value="sneakers"
-        title="Sneakers"
-        name="test"
+        value="capa"
+        title="capa"
+        name="category" 
         />
         <input
         handleChange={handleChange}
-        value="falts"
-        title="Falts"
-        name="test"
+        value="generador"
+        title="generador"
+        name="category" 
         />
         <input
         handleChange={handleChange}
-        value="sandals"
-        title="Sandals"
-        name="test"
+        value="moldura"
+        title="moldura"
+        name="category" 
         />
         <input
         handleChange={handleChange}
-        value="heels"
-        title="Heels"
-        name="test"
+        value="soporte"
+        title="soporte"
+        name="category" 
         />
        </div>
     </div>
   )
 }
-export default Category
+export default Category*/}
 
 /** < Input/>
         < Input/>

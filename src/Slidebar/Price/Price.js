@@ -10,7 +10,7 @@ function Price  ({handleChange}) {
       </h2>
       
     <label className="sidebar-label-container">
-    <input onChange={handleChange} type="radio" name="test" value=""/>
+    <input onChange={handleChange} type="radio" name="price" value=""/>
     <span className="checkmark">
     </span>All
     </label>
@@ -18,26 +18,26 @@ function Price  ({handleChange}) {
     handleChange={handleChange}    
     value={50}
     title="$0 - 50"
-    name="test2"
+    name="price"
     />
     
     <Input
     handleChange={handleChange}    
     value={100}
     title="$50 - 100"
-    name="test2"
+    name="price"
     />
     <Input
     handleChange={handleChange}    
     value={150}
     title="$100 - 150"
-    name="test2"
+    name="price"
     />
     <Input
     handleChange={handleChange}    
     value={200}
     title="Over $150"
-    name="test2"
+    name="price"
     />
       </div>
   )
